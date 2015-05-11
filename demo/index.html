@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset='utf-8' />
+    <link href='css/site.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.css' rel='stylesheet' />
+  </head>
+  <body>
+    <div style='padding:10px 20px;background:#fee'>
+      <p>This is <a href='http://stickshift.org/'>a demo of Stickshift, a fast and simple SQL data analysis tool</a>.
+      Type a query below and hit Query to try it out: for instance, type one of these:
+      </p>
+      <div class='clearfix col12 unlimiter'>
+          <pre class='col4'>select * from places;</pre>
+          <pre class='col4'>select * from fake;</pre>
+          <pre class='col4'>select * from cats;</pre>
+      </div>
+    </div>
+    <div id='page'></div>
+    <script src='libs.js'></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.js'></script>
+    <script src='site.js'></script>
+  </body>
+</html>

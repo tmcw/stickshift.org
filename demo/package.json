@@ -1,0 +1,28 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "stickshift demo application",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js | uglifyjs -c -m > site.js && npm run build-css && npm run build-libs",
+    "build-css": "cleancss node_modules/stickshift/css/base/base.css node_modules/stickshift/css/codemirror.css node_modules/stickshift/css/vibrant-ink.css node_modules/stickshift/css/fixed-data-table.css node_modules/stickshift/css/site.css > css/site.css && cp -r node_modules/stickshift/css/base/* css",
+    "build-libs": "cat node_modules/stickshift/lib/d3.v3.min.js node_modules/stickshift/lib/vega.js sql.js > libs.js",
+    "start": "budo index.js --serve site.js"
+  },
+  "keywords": [
+    "stickshift",
+    "demo"
+  ],
+  "author": "Tom MacWright",
+  "license": "ISC",
+  "dependencies": {
+    "sql.js": "^0.2.21",
+    "stickshift": "^1.5.1",
+    "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "browserify": "^10.1.3",
+    "budo": "^4.0.0",
+    "clean-css": "^3.2.9"
+  }
+}
